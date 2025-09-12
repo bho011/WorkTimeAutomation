@@ -1,0 +1,19 @@
+1. - Backup kopie der Autopilot.txt datei erzeugen!
+2. - Autopilot.txt öffnen und Username und Password ändern "" stehen lassen!
+3. - Datei Speichern und schließen
+4. - F2 Drücken .txt löschen und .ps1 schreiben / erzeuge eine ps1 Datei
+5. - Neuer ordner mit dem Namen "Scripts" auf C:
+6. - Kopiere den Ordner "Autopilot" mit Inhalt in C:\Scripts\
+7. - Starte Powershell als Administrator
+8. - Führe folgende Befehle durch:
+	8.a - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+	8.b - Install-Module -Name ps2exe -Scope CurrentUser
+	8.c - Invoke-ps2exe "C:\Scripts\Autopilot\autopilot.ps1" "C:\Scripts\Autopilot\autopilot_1.exe" -noConsole -icon "C:\Scripts\Autopilot\Icons8-autopilot-50.ico"
+9. - Wenn "autopilot.exe" im Ordner "C:\Scripts\Autopilot\autopilot_1.exe" jetzt existiert dann war alles erfolgreich.
+10. - Wenn "autopilot.exe" nach Systemstart ausgeführt wird muss die an und Abmeldung im System, an- & Abmeldung zur Pause automatisiert sein!
+11. - # Ausnahme für diesen einen Prozess (egal wo er liegt, sonst löscht Defender das Programm!) Folgenden befehl in Powershell als Admin absetzten!
+	Add-MpPreference -ExclusionProcess "autopilot.exe"
+12. - Das Script schreibt unter "C:\Scripts\damago-autopilot.log" eine Log datei zur Kontrolle ob alles funktioniert hat!
+13. - Lösche den Inhalt der LOG regelmäßig
+
+14. - NUTZ ES ABER HALT DIE SCHNAUTZE!!!!!
