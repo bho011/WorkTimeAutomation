@@ -50,10 +50,10 @@ Es zeigt, wie Automatisierung und Skripting mit PowerShell umgesetzt werden kön
 
 ===============================================================================================================================================================================================================
 
-# Damago Autopilot
+# Autopilot
 
 A learning project developed during a retraining program, written in PowerShell.  
-The script automates recurring actions in a web-based time tracking system (Damago Kursverwaltung).
+The script automates recurring actions in a web-based time tracking system (Kursverwaltung).
 
 ## Features
 
@@ -70,7 +70,7 @@ The script automates recurring actions in a web-based time tracking system (Dama
 - Implemented in **PowerShell 5.1/7+**
 - Uses `Invoke-WebRequest` with session cookies for authentication
 - Random delays and daily schedule handled via PowerShell loops
-- Local log file (`damago-autopilot.log`) for transparency
+- Local log file (`...-autopilot.log`) for transparency
 - Shutdown via `Stop-Computer` or fallback to `shutdown.exe`
 
 ## Security Considerations
