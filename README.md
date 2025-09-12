@@ -45,5 +45,57 @@ Ein Automatisierungs-Skript (ursprünglich in PowerShell, später auch portierba
 
 ## Hinweis
 
-Dieses Projekt dient **nur Demonstrations- und Lerneffekten**.  
+⚠️  Dieses Projekt dient **nur Demonstrations- und Lerneffekten**.  
 Es zeigt, wie Automatisierung und Skripting mit PowerShell umgesetzt werden können, und welche **Sicherheitsaspekte** bei Web-Applikationen (z. B. fehlendes HTTPS, kein CSRF-Schutz) relevant sind.
+
+===============================================================================================================================================================================================================
+
+# Damago Autopilot
+
+A learning project developed during a retraining program, written in PowerShell.  
+The script automates recurring actions in a web-based time tracking system (Damago Kursverwaltung).
+
+## Features
+
+- Automatic **login** on system startup (with retry logic if the network is not yet available)
+- Scheduled **break check-ins and immediate check-outs** at predefined times (10:15, 12:15, 14:15)
+- **Logout** and optional **system shutdown** at 16:15
+- **Randomized delays** before actions (1–30 seconds) to mimic human behavior
+- **Logging** to file with timestamps
+- **Abort mechanism**: if a special file exists, the shutdown will be canceled
+- **User-Agent spoofing** to appear as a Chrome browser in server logs
+
+## Technical Details
+
+- Implemented in **PowerShell 5.1/7+**
+- Uses `Invoke-WebRequest` with session cookies for authentication
+- Random delays and daily schedule handled via PowerShell loops
+- Local log file (`damago-autopilot.log`) for transparency
+- Shutdown via `Stop-Computer` or fallback to `shutdown.exe`
+
+## Security Considerations
+
+⚠️ This project is for **educational purposes only**.  
+It demonstrates automation, scheduling, and HTTP interaction with a legacy web system.
+
+Known limitations:
+- **Plaintext credentials** in the script (insecure for production)
+- **HTTP only** – credentials and cookies are sent unencrypted
+- No CSRF protection or additional security checks on the server side
+- Logs grow indefinitely unless rotated
+- Running with elevated rights for shutdown introduces risks
+
+## Planned Improvements
+
+- Porting to **Python** for better cross-platform support (Linux, macOS)
+- Using a **configuration file** for schedules and credentials
+- Encrypted credential storage (e.g., DPAPI, Credential Manager)
+- Improved logging with rotation
+- Linux version using `curl`/`requests` and `systemd` timers
+- Optional GUI for configuration
+
+---
+
+### Disclaimer
+⚠️ This repository is part of a **training and learning exercise**.  
+It is **not meant for production use**. Any resemblance to real systems is coincidental.
