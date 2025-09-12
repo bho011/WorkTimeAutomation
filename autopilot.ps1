@@ -9,7 +9,7 @@
    ======================= #>
 
 # ===== Konfiguration =====
-$Base        = "http://10.10.10.7:4555/damago/"
+$Base        = "http://10.10.10.7:4555/.../"
 $LoginUrl    = $Base + "index.php?s=login"
 $BreakUrl    = $Base + "index.php?s=break"
 $LogoutUrl   = $Base + "index.php?s=logout"
@@ -17,7 +17,7 @@ $CheckUrl    = $Base + "index.php"        # für einfache Login-Prüfung
 
 $User            = "Your USERNAME"
 $PasswordPlain   = "YOUR PASWD"          # nur Testumgebung
-$LogFile         = "C:\Scripts\damago-autopilot.log"
+$LogFile         = "C:\Scripts\...-autopilot.log"
 
 # Shutdown/Abbruch
 $ShutdownCountdownSec = 6
@@ -54,7 +54,7 @@ function Check-LoggedIn($websess) {
   } catch { return $false }
 }
 
-function Invoke-DamagoAction([ValidateSet("break","logout")]$Action) {
+function Invoke-...Action([ValidateSet("break","logout")]$Action) {
   try {
     # 1) Login + Session
     $sess = $null
@@ -173,5 +173,5 @@ while ($true) {
     continue
   }
 
-  Invoke-DamagoAction -Action $next.Action
+  Invoke-...Action -Action $next.Action
 }
