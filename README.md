@@ -48,7 +48,7 @@ Ein Automatisierungs-Skript (ursprünglich in PowerShell, später auch portierba
 ⚠️  Dieses Projekt dient **nur Demonstrations- und Lerneffekten**.  
 Es zeigt, wie Automatisierung und Skripting mit PowerShell umgesetzt werden können, und welche **Sicherheitsaspekte** bei Web-Applikationen (z. B. fehlendes HTTPS, kein CSRF-Schutz) relevant sind.
 
-===============================================================================================================================================================================================================
+=================================================================================================================================================================================================================================
 
 # Autopilot
 
