@@ -15,5 +15,3 @@
 	Add-MpPreference -ExclusionProcess "autopilot.exe"
 12. - Das Script schreibt unter "C:\Scripts\damago-autopilot.log" eine Log datei zur Kontrolle ob alles funktioniert hat!
 13. - Lösche den Inhalt der LOG regelmäßig
-
-14. - NUTZ ES ABER HALT DIE SCHNAUTZE!!!!!
